@@ -7,7 +7,10 @@ module.exports = ({ prod } = {}) => {
   return {
     mode: prod ? 'production' : 'development',
     entry: {
-      index: './src',
+      index: './src/',
+    },
+    resolve: {
+      extensions: ['.js', '.ts', '.tsx'],
     },
     output: {
       path: path.join(__dirname, 'dist'),
@@ -18,7 +21,7 @@ module.exports = ({ prod } = {}) => {
     module: {
       rules: [
         {
-          test: /\.js$/,
+          test: /\.[j|t]sx?$/,
           loader: 'babel-loader',
           exclude: /node_modules/,
         },
