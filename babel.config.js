@@ -1,14 +1,5 @@
 module.exports = {
-  presets: [
-    [
-      "@babel/preset-env",
-      {
-        targets: {
-          firefox: 60
-        }
-      }
-    ]
-  ],
+  presets: ["@babel/preset-env"],
   plugins: [
     "@babel/plugin-transform-react-jsx",
     "@babel/plugin-proposal-class-properties",
