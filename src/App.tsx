@@ -1,13 +1,15 @@
-import * as React from "react";
+import * as React from 'react';
 
-class App extends React.Component<{}, {}> {
-  render() {
-    return (
-      <div>
-        <h1>Hello World</h1>
-      </div>
-    );
-  }
-}
+const App: React.FunctionComponent<{}> = () => {
+  const [counter, setCounter] = React.useState(0);
+
+  return (
+    <div>
+      <h1>Hello World</h1>
+      <p>{counter}</p>
+      <button onClick={() => setCounter(counter + 1)}>Click Me</button>
+    </div>
+  );
+};
 
 export default App;
