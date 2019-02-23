@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 'node'
+
+cache:
+  directories:
+    - '$HOME/.npm'
+
+install:
+  - npm ci
+
+script:
+  - npm run tsc
+  - npm t
+
+notifications:
+  email: false
