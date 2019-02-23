@@ -1,4 +1,4 @@
-# react-starter-kit
+# react-starter-kit &middot; [![Build Status](https://travis-ci.com/7h1b0/react-starter-kit.svg?branch=master)](https://travis-ci.com/7h1b0/react-starter-kit)
 
 ## Quick Start
 
