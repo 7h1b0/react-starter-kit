@@ -10,6 +10,7 @@ install:
   - npm ci
 
 script:
+  - npm run prettier:check
   - npm run tsc
   - npm t
 
