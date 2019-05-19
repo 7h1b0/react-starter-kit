@@ -45,7 +45,7 @@ module.exports = ({ prod } = {}) => {
             }
           : undefined,
       }),
-      new CleanWebpackPlugin('dist', { verbose: false }),
+      new CleanWebpackPlugin({ verbose: false }),
     ],
     optimization: {
       splitChunks: {
