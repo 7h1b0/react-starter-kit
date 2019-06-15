@@ -10,8 +10,8 @@ install:
   - npm ci
 
 script:
-  - npm run prettier:check
-  - npm run tsc
+  - npm run format:check
+  - npm run type:check
   - npm t
 
 notifications:

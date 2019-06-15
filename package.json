@@ -7,8 +7,8 @@
     "start": "webpack-dev-server --open",
     "build": "webpack --env.prod",
     "test": "jest",
-    "tsc": "tsc --noEmit",
-    "prettier:check": "prettier --list-different \"src/**/*.{js,ts,tsx}\""
+    "type:check": "tsc --noEmit",
+    "format:check": "prettier --list-different \"src/**/*.{js,ts,tsx}\""
   },
   "keywords": [],
   "author": "",
