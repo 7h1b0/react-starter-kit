@@ -12,6 +12,7 @@ install:
 script:
   - npm run format:check
   - npm run type:check
+  - npm run lint:check
   - npm t
 
 notifications:
