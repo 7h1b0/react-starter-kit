@@ -7,7 +7,7 @@ const App: React.FunctionComponent<{}> = () => {
     <div>
       <h1>Hello World</h1>
       <p>{counter}</p>
-      <button onClick={() => setCounter(state => state + 1)}>Click Me</button>
+      <button onClick={() => setCounter((state) => state + 1)}>Click Me</button>
     </div>
   );
 };
