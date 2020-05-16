@@ -12,9 +12,6 @@ module.exports = {
   },
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/no-parameter-properties': 'off',
-    '@typescript-eslint/explicit-member-accessibility': 'off',
-    '@typescript-eslint/no-namespace': 'off',
   },
   settings: {
     react: {
