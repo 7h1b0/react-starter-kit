@@ -1,17 +1,19 @@
 import * as React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import App from './App';
 
 describe('<App />', () => {
   it('should render Hello Word and increment counter', () => {
-    const { getByText } = render(<App />);
+    render(<App />);
 
-    expect(getByText('Hello World')).toBeVisible();
-    expect(getByText('0')).toBeVisible();
+    expect(screen.getByText('Hello World')).toBeVisible();
+    expect(screen.getByText('0')).toBeVisible();
+    expect(screen.queryByText('1')).not.toBeInTheDocument();
 
-    fireEvent.click(getByText('Click Me'));
-    expect(getByText('1')).toBeVisible();
+    fireEvent.click(screen.getByText('Click Me'));
+    expect(screen.getByText('1')).toBeVisible();
+    expect(screen.queryByText('0')).not.toBeInTheDocument();
   });
 });
