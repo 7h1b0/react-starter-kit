@@ -1,21 +1,25 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'react-hooks', 'jsx-a11y'],
   extends: [
+    'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
-    'prettier/@typescript-eslint',
+    'plugin:jsx-a11y/recommended',
   ],
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-  },
-  rules: {
-    '@typescript-eslint/explicit-function-return-type': 'off',
-  },
   settings: {
     react: {
-      version: 'detect',
+      version: '16.8',
     },
+  },
+  env: {
+    browser: true,
+    jest: true,
+    es6: true,
+    node: true,
+  },
+  parserOptions: {
+    ecmaVersion: 10,
+    sourceType: 'module',
   },
 };

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const App: React.FunctionComponent<{}> = () => {
+const App: React.FunctionComponent<unknown> = () => {
   const [counter, setCounter] = React.useState(0);
 
   return (
