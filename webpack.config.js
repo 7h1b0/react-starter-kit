@@ -8,6 +8,7 @@ module.exports = ({ prod } = {}) => {
     entry: {
       index: './src/',
     },
+    target: 'web',
     resolve: {
       extensions: ['.js', '.ts', '.tsx'],
     },
@@ -44,11 +45,11 @@ module.exports = ({ prod } = {}) => {
       },
     },
     devServer: {
+      open: true,
       contentBase: path.join(__dirname, 'src'),
-      compress: true,
       historyApiFallback: true,
-      noInfo: true,
       port: 3000,
+      stats: 'errors-only',
     },
     bail: true,
     node: false,
