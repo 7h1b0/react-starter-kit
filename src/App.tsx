@@ -1,7 +1,7 @@
-import * as React from 'react';
+import { useState } from 'react';
 
-const App: React.FunctionComponent<unknown> = () => {
-  const [counter, setCounter] = React.useState(0);
+const App: React.FunctionComponent = () => {
+  const [counter, setCounter] = useState(0);
 
   return (
     <div>

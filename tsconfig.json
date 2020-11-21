@@ -2,8 +2,8 @@
   "compilerOptions": {
     "types": ["jest"],
     "target": "esnext",
+    "jsx": "react-jsx",
     "module": "commonjs",
-    "jsx": "react",
     "outDir": "lib",
     "noEmit": true,
 

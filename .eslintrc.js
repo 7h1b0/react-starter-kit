@@ -22,4 +22,7 @@ module.exports = {
     ecmaVersion: 10,
     sourceType: 'module',
   },
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+  },
 };
