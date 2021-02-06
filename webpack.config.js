@@ -3,11 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
-module.exports = ({ prod } = {}) => {
-  const productionPlugins = prod ? [] : [new ReactRefreshWebpackPlugin()];
+module.exports = () => {
+  const isProd = process.env.NODE_ENV === 'production';
+  const productionPlugins = isProd ? [] : [new ReactRefreshWebpackPlugin()];
 
   return {
-    mode: prod ? 'production' : 'development',
+    mode: isProd ? 'production' : 'development',
     entry: {
       index: './src/',
     },
@@ -18,9 +19,9 @@ module.exports = ({ prod } = {}) => {
     output: {
       path: path.join(__dirname, 'dist'),
       filename: '[name].[contenthash].js',
-      pathinfo: !prod,
+      pathinfo: !isProd,
     },
-    devtool: prod ? false : 'source-map',
+    devtool: isProd ? false : 'source-map',
     module: {
       rules: [
         {
@@ -28,7 +29,7 @@ module.exports = ({ prod } = {}) => {
           loader: 'babel-loader',
           exclude: /node_modules/,
           options: {
-            plugins: [!prod && require.resolve('react-refresh/babel')].filter(
+            plugins: [!isProd && require.resolve('react-refresh/babel')].filter(
               Boolean,
             ),
           },
