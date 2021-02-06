@@ -28,7 +28,7 @@
     "@babel/preset-typescript": "^7.12.7",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
+    "@testing-library/react": "^11.2.5",
     "@types/jest": "^26.0.20",
     "@types/jest-diff": "^24.3.0",
     "@types/react": "^17.0.0",
