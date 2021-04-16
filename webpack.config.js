@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = () => {
@@ -20,6 +19,7 @@ module.exports = () => {
       path: path.join(__dirname, 'dist'),
       filename: '[name].[contenthash].js',
       pathinfo: !isProd,
+      clean: true,
     },
     devtool: isProd ? false : 'source-map',
     module: {
@@ -40,7 +40,6 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         template: './src/index.html',
       }),
-      new CleanWebpackPlugin({ verbose: false }),
       ...productionPlugins,
     ],
     optimization: {
