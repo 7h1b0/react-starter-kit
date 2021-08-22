@@ -54,12 +54,13 @@ module.exports = () => {
       },
     },
     devServer: {
-      hot: true,
       open: true,
-      contentBase: path.join(__dirname, 'src'),
-      historyApiFallback: true,
+      hot: true,
       port: 3000,
-      stats: 'errors-only',
+      historyApiFallback: true,
+      devMiddleware: {
+        stats: 'errors-only',
+      },
     },
     bail: true,
     node: false,
