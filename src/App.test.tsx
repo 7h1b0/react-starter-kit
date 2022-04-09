@@ -11,7 +11,8 @@ describe('<App />', () => {
     expect(screen.getByText('0')).toBeVisible();
     expect(screen.queryByText('1')).not.toBeInTheDocument();
 
-    fireEvent.click(screen.getByText('Click Me'));
+    fireEvent.click(screen.getByRole('button', { name: 'Click Me' }));
+
     expect(screen.getByText('1')).toBeVisible();
     expect(screen.queryByText('0')).not.toBeInTheDocument();
   });
