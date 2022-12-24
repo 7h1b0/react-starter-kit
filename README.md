@@ -20,7 +20,3 @@ Builds the app for production to the dist folder.
 
 The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
-
-### `npm t` or `yarn test`
-
-Runs the test watcher (Jest) in an interactive mode.
