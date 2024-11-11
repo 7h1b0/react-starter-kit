@@ -1,8 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import App from './App';
 
-import 'virtual:uno.css';
-
 const container = document.getElementById('app');
 
 if (container) {
